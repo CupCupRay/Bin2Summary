@@ -4,7 +4,7 @@
 
 Bin2Summary is a novel framework to automatically summarize the functionality of the function in stripped binaries with natural language sentences. Specifically, it includes a functionality-specific code embedding module to facilitate fine-grained similarity detection and an attention-based seq2seq model to generate summaries in natural language.
 
-<p align="center"><img src="figs/framework.png" alt="framework" width="800"></p>
+<p align="center"><img src="figs/framework.PNG" alt="framework" width="800"></p>
 
 This repository includes Bin2Summary source code (following for setup) and the [Supplementary material](https://drive.google.com/file/d/1s3_bKWKrYK1_6hEKAcsJbzEH_Bgtoyt1/view?usp=drive_link).
 
