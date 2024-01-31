@@ -848,4 +848,4 @@ if __name__ == '__main__':
     if args.File:
         file_path = args.File
 
-    time_stamp = main(Word2vec_train_set='Load', On_Service=True)
+    time_stamp = main(Word2vec_train_set='New', On_Service=True)

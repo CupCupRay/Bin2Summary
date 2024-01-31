@@ -707,5 +707,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     FSE_FLAG = args.FSE
 
-    time_stamp = main(Word2vec_train_set='Load', On_Service=True, FSE_mode=FSE_FLAG)
+    time_stamp = main(Word2vec_train_set='New', On_Service=True, FSE_mode=FSE_FLAG)
     # Word2vec_train_set=['Whole_New', 'New', 'Load']

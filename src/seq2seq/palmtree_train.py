@@ -720,5 +720,5 @@ if __name__ == '__main__':
 
     current_file_path = "data/"
 
-    time_stamp = main(Word2vec_train_set='Load', On_Service=True, data=current_file_path)
+    time_stamp = main(Word2vec_train_set='New', On_Service=True, data=current_file_path)
     # Word2vec_train_set=['Whole_New', 'New', 'Load']
