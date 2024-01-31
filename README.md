@@ -36,12 +36,10 @@ Depending on the assembly language model used, you need to install extra package
 
 ## Dataset Preparation
 
-### Dataset Construction (optional)
-
-In this repository, we have prepared a set of `Coreutils` binaries compiled based on `x64` using [Cygwin](https://www.cygwin.com/). These sample binaries can be used to construct a small dataset.
+In this repository, we have prepared a sample dataset of `Coreutils` binaries compiled based on `x64` using [Cygwin](https://www.cygwin.com/). These sample binaries can be used to construct a small dataset.
 For more details on how to generate training and testing datasets from binaries, please refer to the README under [`src/`](src/) with different assembly language model (e.g., [PalmTree](./src/palmtree_emb/README.md), [DeepBinDiff](./src/deepbindiff_emb/README.md),  [Asm2vec](./src/asm2vec_emb/README.md)), and you can also decide to apply FSE module or not.
 
-#### Example: Function Embedding with [PalmTree](./src/palmtree_emb/README.md)
+### Example: Function Embedding with [PalmTree](./src/palmtree_emb/README.md)
 
 - Step 0: Go to the [`src/palmtree_emb`](./src/palmtree_emb/)
   ```
@@ -64,11 +62,6 @@ For more details on how to generate training and testing datasets from binaries,
   ```
 
 In case you are interested in using complete datasets or utilize other assembly language model and modules, you can try to conduct pre-processing by yourself. The complete datasets can be found in [Source code for dataset](https://drive.google.com/drive/folders/1D1fcsWCzm8-J4C_L2WiQ7rkib-sKHl2W?usp=sharing), [Raw binaries for dataset](https://drive.google.com/drive/folders/1ZgmuB5T2Ho5NRmJLozpUcmWvsEt3YxUT?usp=drive_link).
-
-### Pre-processed Data
-
-If you do not want to prepare the datasets (cause it costs much time), we provide a sample training/testing set [here](https://drive.google.com/drive/folders/1ZrL5BVrPF-hEkGTjWbvfocR2Zl6yj3Uk?usp=sharing). You can download and put them in [`data/`](./data/) directory.
-The sample training/testing set is constructed using the binaries based on `x64` using [Cygwin](https://www.cygwin.com/), they are then pre-processed using `PalmTree-FSE` module.
 
 
 ## Model Training and Testing
