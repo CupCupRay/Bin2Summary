@@ -38,8 +38,8 @@ BB_MAX_NUM = 300  # CONST
 BB_VECTOR_DIM = 128  # CONST == 128
 COMMENT_MAX_LEN = 15
 WORD_EMBEDDING_DIM = 128  # CONST == 128
-# BATCH_SIZE_PER_REPLICA = 64
-BATCH_SIZE_PER_REPLICA = 16
+BATCH_SIZE_PER_REPLICA = 256
+# BATCH_SIZE_PER_REPLICA = 16
 TRAIN_BATCH_SIZE = BATCH_SIZE_PER_REPLICA * strategy.num_replicas_in_sync
 STEP_PER_EPOCH = 256
 # STEP_PER_EPOCH = 4
@@ -52,7 +52,7 @@ HIDDEN_DIM = 512
 NETWORK_DEPTH = 6  # Need >= 2
 DROPOUT = 0.2
 LR = 0.0002
-MIN_LR = 0.0000001
+MIN_LR = 0.00001
 CALL_BACK_MONITOR = 'val_loss'
 ####################### CONFIGURATIONS #######################
 file_count = 0
@@ -606,9 +606,9 @@ def main(Word2vec_train_set='Load', model_load=None, On_Service=False):
     print("Model input shape: ", my_model.input_shape)
     print("Model output shape: ", my_model.output_shape)
 
-    LR_callback = tf.keras.callbacks.ReduceLROnPlateau(monitor=CALL_BACK_MONITOR, factor=0.5, patience=4,
+    LR_callback = tf.keras.callbacks.ReduceLROnPlateau(monitor=CALL_BACK_MONITOR, factor=0.5, patience=32,
                                                        min_delta=0.0001, min_lr=MIN_LR, mode='auto')
-    Early_stop = tf.keras.callbacks.EarlyStopping(monitor=CALL_BACK_MONITOR, min_delta=0.0001, patience=8, mode='auto')
+    Early_stop = tf.keras.callbacks.EarlyStopping(monitor=CALL_BACK_MONITOR, min_delta=0.0001, patience=64, mode='auto')
     CSV_log = tf.keras.callbacks.CSVLogger(path_prefix + 'results/' + timeRecord + '.csv')
     Checkpoint = tf.keras.callbacks.ModelCheckpoint(path_prefix + 'results/' + timeRecord + '.model', verbose=1,
                                                     monitor=CALL_BACK_MONITOR, save_best_only=True, mode='auto')
