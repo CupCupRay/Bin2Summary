@@ -96,7 +96,20 @@ The results will be stored at [`results/`](./results/).
 
 ## Citation
 
-Coming soon.
+If you find Bin2Summary useful, please consider citing our paper:
+
+```
+@article{song2024bin2summary,
+  title={Bin2Summary: Beyond Function Name Prediction in Stripped Binaries with Functionality-Specific Code Embeddings},
+  author={Song, Zirui and Chen, Jiongyi and Zhang, Kehuan},
+  journal={Proceedings of the ACM on Software Engineering},
+  volume={1},
+  number={FSE},
+  pages={47--69},
+  year={2024},
+  publisher={ACM New York, NY, USA}
+}
+```
 
 
 
